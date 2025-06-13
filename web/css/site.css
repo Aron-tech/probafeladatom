@@ -1,0 +1,123 @@
+#draggable-container {
+    height: 500px;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    overflow: auto;
+}
+
+.group-container {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    cursor: move;
+}
+
+.group-children {
+    margin-left: 30px;
+}
+
+.group-name {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main > .container {
+    padding: 70px 15px 20px;
+    flex: 1;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+.list-group-item {
+    cursor: move;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+a.asc:after, a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+.nav li > form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.draggable-group {
+    position: relative;
+    z-index: 100;
+}
